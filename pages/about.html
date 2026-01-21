@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="About Me Page">
-    <title>About Me</title>
+    <meta name="description" content="Contact Page">
+    <title>Contact Me</title>
     <link rel="stylesheet" href="style.css">
     <style>
         body {
@@ -14,30 +14,74 @@
             background-color: #f4f4f4;
         }
         header {
-            background-color: #333;
+            background-image: url('/media/wd.png'); /* Banner image */
             color: white;
             text-align: center;
             padding: 50px 0;
+            background-size: cover;
+            background-position: center;
         }
         header h1 {
             margin: 0;
+            font-size: 2.5em;
         }
-        .about-container {
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .contact-container {
             display: flex;
             flex-direction: column;
             align-items: center;
             padding: 40px 20px;
             text-align: center;
         }
-        .about-container img {
+        .contact-container img {
             border-radius: 50%;
             max-width: 200px;
             margin-bottom: 30px;
         }
-        .about-container p {
+        .contact-container p {
             width: 60%;
             font-size: 1.2em;
             color: #555;
+        }
+        .contact-form {
+            width: 60%;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form h2 {
+            text-align: center;
+            color: #333;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background-color: #333;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .contact-form button:hover {
+            background-color: #555;
         }
         .links {
             margin-top: 30px;
@@ -66,25 +110,49 @@
 <body>
 
     <header>
-        <h1>About Me</h1>
-        <p>Learn a little more about me and my work!</p>
+        <h1>Contact Me</h1>
+        <p>I'd love to hear from you! Feel free to reach out.</p>
     </header>
 
-    <div class="about-container">
-        <!-- Add your image here -->
+    <div class="contact-container">
+        <!-- Replace with your image -->
         <img src="your-image.jpg" alt="Your Image">
         
-        <!-- Replace this paragraph with your details -->
+        <!-- Replace this paragraph with your message -->
         <p>
-            Hi, I'm [Your Name]. I'm a passionate web developer with a focus on creating intuitive and user-friendly web applications.
-            I specialize in [your areas of expertise], and I am always looking for new challenges to improve my skills.
+            If you have any questions, or if you just want to say hello, feel free to drop me a message. I’m always open to discussing new opportunities, collaborations, or ideas.
         </p>
 
+        <!-- Links to GitHub, Resume, and LinkedIn -->
         <div class="links">
             <a href="https://github.com/yourusername" target="_blank">GitHub</a>
             <a href="https://yourresume.com" target="_blank">Resume</a>
             <a href="https://linkedin.com/in/yourusername" target="_blank">LinkedIn</a>
         </div>
+    </div>
+
+    <div class="contact-form">
+        <h2>Send Me a Message</h2>
+        <form action="https://formspree.io/f/mlggpznb" method="POST">
+            <!-- Name Input -->
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- Email Input -->
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" required>
+
+            <!-- Subject Input -->
+            <label for="subject">Subject</label>
+            <input type="text" id="subject" name="subject" required>
+
+            <!-- Message Textarea -->
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <!-- Submit Button -->
+            <button type="submit">Send Message</button>
+        </form>
     </div>
 
     <footer>
