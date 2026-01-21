@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contact Page">
+    <meta name="description" content="Contact Us Page">
     <title>Contact Me</title>
     <link rel="stylesheet" href="style.css">
     <style>
@@ -14,78 +14,58 @@
             background-color: #f4f4f4;
         }
         header {
-            background-image: url('/media/wd.png'); /* Banner image */
+            background-image: url('/media/wd.png'); /* Banner Image */
             color: white;
-            text-align: center;
-            padding: 50px 0;
-            background-size: cover;
+            text-align: left;
+            padding: 20px;
+            background-size: contain;
             background-position: center;
         }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
+        nav {
+            background-color: #000000;
+            padding: 10px;
+            text-align: right;
         }
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: background-color 0.3s;
         }
-        .contact-container {
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* About Section */
+        .about-container {
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
+            height: 60vh; /* Center the content vertically */
             padding: 40px 20px;
             text-align: center;
-        }
-        .contact-container img {
-            border-radius: 50%;
-            max-width: 200px;
-            margin-bottom: 30px;
-        }
-        .contact-container p {
-            width: 60%;
-            font-size: 1.2em;
-            color: #555;
-        }
-        .contact-form {
-            width: 60%;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: white;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .contact-form h2 {
-            text-align: center;
-            color: #333;
-        }
-        .contact-form label {
-            display: block;
-            margin-bottom: 8px;
-            font-weight: bold;
-            color: #333;
-        }
-        .contact-form input,
-        .contact-form textarea {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        .contact-form button {
-            background-color: #333;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-        }
-        .contact-form button:hover {
-            background-color: #555;
-        }
-        .links {
             margin-top: 30px;
         }
+
+        .about-container img {
+            border-radius: 50%;
+            max-width: 150px;
+            margin-bottom: 20px;
+        }
+
+        .about-container p {
+            font-size: 1.2em;
+            color: #555;
+            width: 60%;
+            margin-bottom: 20px;
+        }
+
+        .links {
+            margin-top: 20px;
+        }
+
         .links a {
             margin: 0 20px;
             text-decoration: none;
@@ -93,9 +73,11 @@
             font-weight: bold;
             transition: color 0.3s;
         }
+
         .links a:hover {
             color: #555;
         }
+
         footer {
             background-color: #333;
             color: white;
@@ -111,16 +93,23 @@
 
     <header>
         <h1>Contact Me</h1>
-        <p>I'd love to hear from you! Feel free to reach out.</p>
     </header>
 
-    <div class="contact-container">
-        <!-- Replace with your image -->
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- About Me Section Centered on the Page -->
+    <div class="about-container">
+        <!-- Add your image here -->
         <img src="your-image.jpg" alt="Your Image">
         
-        <!-- Replace this paragraph with your message -->
+        <!-- Replace this paragraph with your details -->
         <p>
-            If you have any questions, or if you just want to say hello, feel free to drop me a message. I’m always open to discussing new opportunities, collaborations, or ideas.
+            Hi, I'm [Your Name]. I'm a passionate web developer with a focus on creating intuitive and user-friendly web applications.
+            I specialize in [your areas of expertise], and I am always looking for new challenges to improve my skills.
         </p>
 
         <!-- Links to GitHub, Resume, and LinkedIn -->
@@ -131,32 +120,8 @@
         </div>
     </div>
 
-    <div class="contact-form">
-        <h2>Send Me a Message</h2>
-        <form action="https://formspree.io/f/mlggpznb" method="POST">
-            <!-- Name Input -->
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required>
-
-            <!-- Email Input -->
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
-
-            <!-- Subject Input -->
-            <label for="subject">Subject</label>
-            <input type="text" id="subject" name="subject" required>
-
-            <!-- Message Textarea -->
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="5" required></textarea>
-
-            <!-- Submit Button -->
-            <button type="submit">Send Message</button>
-        </form>
-    </div>
-
     <footer>
-        <p>&copy; 2026 Your Name</p>
+        <p>&copy; 2026 Brandon Robinson</p>
     </footer>
 
 </body>
