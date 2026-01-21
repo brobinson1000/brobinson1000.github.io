@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Blog Page">
+    <title>My Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            height: 100vh; /* Full viewport height */
+        }
+
+        header {
+            background-image: url('/media/wd.png'); /* Banner Image */
+            color: white;
+            text-align: left;
+            padding: 20px;
+            background-size: contain;
+            background-position: center;
+        }
+
+        nav {
+            background-color: #000000;
+            padding: 10px;
+            text-align: right;
+        }
+
+        nav a {
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #555;
+        }
+
+        /* Blog Post Container */
+        .blog-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1; /* Ensures this section fills the available space */
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .blog-post {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 60%;
+            margin-bottom: 20px;
+            padding: 20px;
+            text-align: left;
+        }
+
+        .blog-post h2 {
+            font-size: 1.8em;
+            color: #333;
+            margin: 0 0 10px;
+        }
+
+        .blog-post p {
+            font-size: 1.2em;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 10px;
+        }
+
+        .blog-post a {
+            text-decoration: none;
+            color: #333;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        .blog-post a:hover {
+            color: #555;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>My Blog</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="blog.html">Blog</a>
+    </nav>
+
+    <!-- Blog Post List -->
+    <div class="blog-container">
+        <!-- Example Blog Post 1 -->
+        <div class="blog-post">
+            <h2><a href="post1.html">The Future of Web Development</a></h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque non risus nec urna tincidunt vulputate. Integer a neque mauris. <a href="post1.html">Read more...</a></p>
+        </div>
+
+        <!-- Example Blog Post 2 -->
+        <div class="blog-post">
+            <h2><a href="post2.html">Understanding JavaScript Closures</a></h2>
+            <p>Curabitur tincidunt nisl vitae sem convallis, a lacinia magna rhoncus. Vivamus et libero non ligula accumsan elementum. Nulla sollicitudin est ut ex posuere. <a href="post2.html">Read more...</a></p>
+        </div>
+
+        <!-- Example Blog Post 3 -->
+        <div class="blog-post">
+            <h2><a href="post3.html">Why Choose React for Web Development</a></h2>
+            <p>Aliquam erat volutpat. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Ut id vehicula ante. <a href="post3.html">Read more...</a></p>
+        </div>
+
+        <!-- Add more blog posts here -->
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Brandon Robinson</p>
+    </footer>
+
+</body>
+</html>
+
