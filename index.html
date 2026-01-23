@@ -11,8 +11,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: #1b466f; /* Dark blue background */
+            color: #d8d1ba; /* Light text color */
         }
 
         h1, h2 {
@@ -21,55 +21,43 @@
 
         a {
             text-decoration: none;
-            color: #007bff;
+            color: #d8d1ba;
         }
 
         a:hover {
             text-decoration: underline;
         }
 
-        /* Header section */
+        /* Header section with repeated image background */
         header {
-            background-color: #fff;
-            padding: 20px;
-            border-bottom: 1px solid #e1e1e1;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            background-color: #1b466f;
+            background-image: url('media/wd.png');
+            background-repeat: repeat;
+            background-size: 150px auto; /* Adjust size of the image */
+            padding: 80px 20px; /* Added padding to give space for text */
+            text-align: center;
         }
 
         .header-container {
             display: flex;
+            flex-direction: column;
             align-items: center;
             gap: 20px;
         }
 
-        .header-container img {
-            width: 100px; /* Adjust this as per your preference */
-            height: auto;
-        }
-
-        .header-text {
-            max-width: 600px;
-        }
-
-        .header-text h1 {
+        .header-container h1 {
+            font-size: 48px;
             margin: 0;
-            font-size: 36px;
         }
 
-        header p {
-            font-size: 16px;
-            line-height: 1.5;
-        }
-
-        header a {
-            color: #007bff;
+        .header-container img {
+            width: 100px;
+            height: auto;
         }
 
         /* Navigation */
         nav {
-            background-color: #007bff;
+            background-color: #1b466f;
             padding: 10px;
         }
 
@@ -86,7 +74,7 @@
         }
 
         nav ul li a {
-            color: white;
+            color: #d8d1ba;
             font-size: 18px;
         }
 
@@ -113,15 +101,28 @@
 
         ul.blog-posts li a {
             font-size: 16px;
-            color: #333;
+            color: #d8d1ba;
+        }
+
+        /* About me section */
+        .about-me {
+            background-color: #1b466f;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .about-me p {
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
         /* Footer */
         footer {
-            background-color: #fff;
+            background-color: #1b466f;
             text-align: center;
             padding: 20px;
-            border-top: 1px solid #e1e1e1;
+            border-top: 1px solid #d8d1ba;
         }
 
         footer p {
@@ -134,16 +135,10 @@
     <header>
         <div class="header-container">
             <img src="wd.png" alt="Brandon Robinson" class="profile-image">
-            <div class="header-text">
-                <h1>Brandon Robinson</h1>
-                <p>I am currently a software engineer at <strong>Jump Trading</strong>, living in Chicago.</p>
-                <p>Some code is on <a href="https://github.com/dpzmick" target="_blank">GitHub</a> and <a href="https://gitlab.com/dpzmick" target="_blank">GitLab</a>.</p>
-                <p>I have a resume available <a href="resume.pdf" target="_blank">here</a>, but I am not currently seeking a new position.</p>
-                <p>Email: <a href="mailto:david@dpzmick.com">david@dpzmick.com</a></p>
-            </div>
+            <h1>Brandon Robinson</h1>
         </div>
     </header>
-    
+
     <nav>
         <ul>
             <li><a href="#projects">Projects</a></li>
@@ -170,8 +165,12 @@
                 <li><a href="#">2020-09-12 - Audio/Visual Latency Tests</a></li>
                 <li><a href="#">2020-05-10 - AMD Zen Memory Latency/Bandwidth Considerations</a></li>
                 <li><a href="#">2020-02-23 - Homelab Act 4: Services and Applications</a></li>
-                <!-- Add more blog posts as needed -->
             </ul>
+        </section>
+
+        <section class="about-me">
+            <h2>About Me</h2>
+            <p>I am currently a software engineer at Jump Trading, living in Chicago. Some of my code is available on GitHub and GitLab. I have a resume available here, though I am not currently seeking a new position. If you want to reach me, feel free to send an email to <a href="mailto:david@dpzmick.com">david@dpzmick.com</a>.</p>
         </section>
     </main>
 
