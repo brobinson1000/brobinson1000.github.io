@@ -11,8 +11,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffffff; /* Light background */
-            color: #1b466f; /* Dark blue text */
+            background-color: #1b466f; /* Dark blue background */
+            color: #d8d1ba; /* Light text color */
         }
 
         h1, h2 {
@@ -21,7 +21,7 @@
 
         a {
             text-decoration: none;
-            color: #1b466f;
+            color: #d8d1ba;
         }
 
         a:hover {
@@ -30,7 +30,7 @@
 
         /* Header section */
         header {
-            background-color: #ffffff;
+            background-color: #1b466f;
             padding: 80px 20px; /* Added padding to give space for text */
             text-align: left;
         }
@@ -71,12 +71,12 @@
 
         ul.blog-posts li a {
             font-size: 16px;
-            color: #1b466f;
+            color: #d8d1ba;
         }
 
         /* About me section */
         .about-me {
-            background-color: #ffffff;
+            background-color: #1b466f;
             padding: 40px;
             text-align: left;
             max-width: 1000px;
@@ -88,12 +88,12 @@
             margin: 0;
         }
 
-        /* Footer with Home button */
+        /* Footer */
         footer {
-            background-color: #ffffff;
+            background-color: #1b466f;
             text-align: center;
             padding: 20px;
-            border-top: 1px solid #1b466f;
+            border-top: 1px solid #d8d1ba;
         }
 
         footer p {
@@ -101,22 +101,28 @@
             font-size: 14px;
         }
 
-        .home-button {
-            padding: 10px 20px;
-            background-color: #1b466f;
-            color: white;
-            border: none;
-            font-size: 16px;
-            cursor: pointer;
-            border-radius: 5px;
+        /* Home link styling */
+        .home-link {
+            font-size: 18px;
+            color: #d8d1ba;
+            text-align: left;
+            margin-left: 40px;
+            margin-top: 20px;
         }
 
-        .home-button:hover {
-            background-color: #d8d1ba;
+        .home-link:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
+
+    <!-- Header section -->
+    <header>
+        <div class="header-container">
+            <h1>b. robinson</h1>
+        </div>
+    </header>
 
     <!-- About Me Section (Moved to the top and left-aligned) -->
     <section class="about-me">
@@ -125,13 +131,6 @@
         GitHub and GitLab. I have a resume available here, though I am not currently seeking a new position. If you
         want to reach me, feel free to send an email to <a href="mailto:1802brad@gmail.com">1802brad@gmail.com</a>.</p>
     </section>
-
-    <!-- Header section -->
-    <header>
-        <div class="header-container">
-            <h1>b. robinson</h1>
-        </div>
-    </header>
 
     <!-- Main content (Projects and Blog) -->
     <main class="container">
@@ -157,12 +156,12 @@
         </section>
     </main>
 
-    <!-- Footer with Home button -->
+    <!-- Footer -->
     <footer>
-        <button class="home-button" onclick="window.location.href='index.html'">Home</button>
         <p>&copy; 2026 Brandon Robinson</p>
+        <a href="index.html" class="home-link">Home</a>
     </footer>
-    
+
 </body>
 </html>
 
