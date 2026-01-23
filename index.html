@@ -11,8 +11,8 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #1b466f; /* Dark blue background */
-            color: #d8d1ba; /* Light text color */
+            background-color: #ffffff; /* Light background */
+            color: #1b466f; /* Dark blue text */
         }
 
         h1, h2 {
@@ -21,16 +21,16 @@
 
         a {
             text-decoration: none;
-            color: #d8d1ba;
+            color: #1b466f;
         }
 
         a:hover {
             text-decoration: underline;
         }
 
-        /* Header section with repeated image background */
+        /* Header section */
         header {
-            background-color: #1b466f;
+            background-color: #ffffff;
             padding: 80px 20px; /* Added padding to give space for text */
             text-align: left;
         }
@@ -46,34 +46,6 @@
         .header-container h1 {
             font-size: 48px;
             margin: 0;
-        }
-
-        /* Navigation */
-        nav {
-            background-color: #1b466f;
-            padding: 10px 0;
-        }
-
-        .nav-container {
-            max-width: 1000px; /* Align nav with header */
-            margin: 0 auto; /* Center the content */
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: left;
-            margin: 0;
-            padding: 0;
-        }
-
-        nav ul li {
-            margin: 0 15px;
-        }
-
-        nav ul li a {
-            color: #d8d1ba;
-            font-size: 18px;
         }
 
         /* Main content */
@@ -99,52 +71,69 @@
 
         ul.blog-posts li a {
             font-size: 16px;
-            color: #d8d1ba;
+            color: #1b466f;
         }
 
         /* About me section */
         .about-me {
-            background-color: #1b466f;
+            background-color: #ffffff;
             padding: 40px;
-            text-align: center;
+            text-align: left;
+            max-width: 1000px;
+            margin: 0 auto;
         }
 
         .about-me p {
             font-size: 18px;
-            max-width: 800px;
-            margin: 0 auto;
+            margin: 0;
         }
 
-        /* Footer */
+        /* Footer with Home button */
         footer {
-            background-color: #1b466f;
+            background-color: #ffffff;
             text-align: center;
             padding: 20px;
-            border-top: 1px solid #d8d1ba;
+            border-top: 1px solid #1b466f;
         }
 
         footer p {
             margin: 0;
             font-size: 14px;
         }
+
+        .home-button {
+            padding: 10px 20px;
+            background-color: #1b466f;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .home-button:hover {
+            background-color: #d8d1ba;
+        }
     </style>
 </head>
 <body>
+
+    <!-- About Me Section (Moved to the top and left-aligned) -->
+    <section class="about-me">
+        <h2>About Me</h2>
+        <p>I am currently a software engineer at Jump Trading, living in Chicago. Some of my code is available on
+        GitHub and GitLab. I have a resume available here, though I am not currently seeking a new position. If you
+        want to reach me, feel free to send an email to <a href="mailto:1802brad@gmail.com">1802brad@gmail.com</a>.</p>
+    </section>
+
+    <!-- Header section -->
     <header>
         <div class="header-container">
             <h1>b. robinson</h1>
         </div>
     </header>
 
-    <nav>
-        <div class="nav-container">
-            <ul>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#blog">Blog</a></li>
-            </ul>
-        </div>
-    </nav>
-
+    <!-- Main content (Projects and Blog) -->
     <main class="container">
         <section id="projects">
             <h2>Projects</h2>
@@ -166,18 +155,14 @@
                 <li><a href="#">2020-02-23 - Homelab Act 4: Services and Applications</a></li>
             </ul>
         </section>
-
-        <section class="about-me">
-            <h2>About Me</h2>
-            <p>I am currently a software engineer at Jump Trading, living in Chicago. Some of my code is available on
-            GitHub and GitLab. I have a resume available here, though I am not currently seeking a new position. If you
-            want to reach me, feel free to send an email to <a href="mailto:1802brad@gmail.com">1802brad@gmail.com</a>.</p>
-        </section>
     </main>
 
+    <!-- Footer with Home button -->
     <footer>
+        <button class="home-button" onclick="window.location.href='index.html'">Home</button>
         <p>&copy; 2026 Brandon Robinson</p>
     </footer>
+    
 </body>
 </html>
 
