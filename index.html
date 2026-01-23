@@ -3,104 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Simple Blog Website">
-    <title>B. Robinson</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brandon Robinson - Software Engineer</title>
     <style>
+        /* Global styles */
         body {
-            font-family: Arial, Helvetica, sans-serif;
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-image: url('media/wd.png');
-            color: white;
-            text-align: left;
-            padding: 20px;
-            background-size: contain;
-        }
-        nav {
-            background-color: #000000;
-            display: flex;
-            justify-content: right;
-            padding: 10px;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            padding: 10px 20px;
-            margin: 0 10px;
-            transition: background-color 0.3s;
-        }
-        nav a:hover {
-            background-color: #555;
-        }
-        .container {
-            display: flex;
-            justify-content: center;
-            padding: 20px;
-        }
-        .content {
-            width: 70%;
-            background-color: white;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
-        .post {
-            margin-bottom: 30px;
-        }
-        .post h2 {
-            font-size: 24px;
+            background-color: #f5f5f5;
             color: #333;
         }
-        .post p {
-            color: #666;
-            line-height: 1.6;
-        }
-        footer {
-            background-color: #000000;
-            color: white;
-            text-align: center;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+
+        h1, h2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        a {
+            text-decoration: none;
+            color: #007bff;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* Header section */
+        header {
+            background-color: #fff;
+            padding: 20px;
+            border-bottom: 1px solid #e1e1e1;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .header-container img {
+            width: 100px; /* Adjust this as per your preference */
+            height: auto;
+        }
+
+        .header-text {
+            max-width: 600px;
+        }
+
+        .header-text h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        header p {
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        header a {
+            color: #007bff;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #007bff;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            font-size: 18px;
+        }
+
+        /* Main content */
+        .container {
+            padding: 40px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        ul.blog-posts li a {
+            font-size: 16px;
+            color: #333;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #fff;
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #e1e1e1;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+        }
     </style>
 </head>
 <body>
-
     <header>
-        <h1>B. Robinson</h1>
-    </header>
-
-    <nav>
-        <a href="pages/about.html">About</a>
-        <a href="pages/posts.html">Posts</a>
-        <a href="pages/contact.html">Contact</a>
-    </nav>
-
-    <div class="container">
-        <div class="content">
-            <div class="post">
-                <h2>Explaining Adjacency and Incidence matrix</h2>
-                <p>Posted on January 20, 2026</p>
-                <p>Adjacency matrix and graph theory stuff...</p>
-            </div>
-
-            <div class="post">
-                <h2>Blog Post Title 2</h2>
-                <p>Posted on January 18, 2026</p>
-                <p>In this second blog post, I'm sharing some insights about the latest web development trends. Nulla facilisi. Proin id justo auctor, tempus nisi sit amet, pharetra urna.</p>
+        <div class="header-container">
+            <img src="wd.png" alt="Brandon Robinson" class="profile-image">
+            <div class="header-text">
+                <h1>Brandon Robinson</h1>
+                <p>I am currently a software engineer at <strong>Jump Trading</strong>, living in Chicago.</p>
+                <p>Some code is on <a href="https://github.com/dpzmick" target="_blank">GitHub</a> and <a href="https://gitlab.com/dpzmick" target="_blank">GitLab</a>.</p>
+                <p>I have a resume available <a href="resume.pdf" target="_blank">here</a>, but I am not currently seeking a new position.</p>
+                <p>Email: <a href="mailto:david@dpzmick.com">david@dpzmick.com</a></p>
             </div>
         </div>
-    </div>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#blog">Blog</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        <section id="projects">
+            <h2>Projects</h2>
+            <ul>
+                <li><strong>Modular synthesizer</strong> - <a href="#">Videos</a></li>
+                <li><strong>Building a Homelab</strong></li>
+                <li><strong>Undergraduate senior thesis</strong> - Automatic parallelization of recursive functions in Clojure</li>
+            </ul>
+        </section>
+
+        <section id="blog">
+            <h2>Blog Posts</h2>
+            <ul class="blog-posts">
+                <li><a href="#">2026-01-19 - Emacs Lisp Performance Oddity</a></li>
+                <li><a href="#">2021-10-26 - Setting Many Teensy 4.1 Pins at the Same Time</a></li>
+                <li><a href="#">2021-03-28 - Badly Computing Polynomial Coefficients from Roots (correctly too!)</a></li>
+                <li><a href="#">2020-09-12 - Audio/Visual Latency Tests</a></li>
+                <li><a href="#">2020-05-10 - AMD Zen Memory Latency/Bandwidth Considerations</a></li>
+                <li><a href="#">2020-02-23 - Homelab Act 4: Services and Applications</a></li>
+                <!-- Add more blog posts as needed -->
+            </ul>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; 2026 Brandon Robinson.</p>
+        <p>&copy; 2026 Brandon Robinson</p>
     </footer>
-
 </body>
 </html>
 
